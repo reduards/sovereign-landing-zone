@@ -38,21 +38,21 @@
       "type": "string",
       "usedBy": "all and bootstrap",
       "sampleValue": "Format for EA - /providers/Microsoft.Billing/BillingAccounts/{BillingAccountId}/enrollmentAccounts/{EnrollmentAccountId}",
-      "defaultValue": null,
+      "defaultValue": "/providers/Microsoft.Billing/BillingAccounts/2222222222222222222/enrollmentAccounts/22222222222222222",
       "value": null,
       "description": "The full resource ID of billing scope associated to the EA, MCA or MPA account you wish to create the subscription in."
     },
     "parCustomer": {
       "type": "string",
       "usedBy": "all and dashboard",
-      "defaultValue": "Country/Region",
+      "defaultValue": "Contoso",
       "value": null,
       "description": "The name of the organization deploying the SLZ to brand the compliance dashboard appropriately."
     },
     "parDeploymentLocation": {
       "type": "string",
       "usedBy": "all, platform, and dashboard",
-      "defaultValue": null,
+      "defaultValue": "swedencentral",
       "value": null,
       "allowedValues": [
         "australiacentral",
@@ -115,7 +115,7 @@
     "parAllowedLocations": {
       "type": "array",
       "usedBy": "all and compliance",
-      "defaultValue": [],
+      "defaultValue": ["swedencentral"],
       "value": [],
       "allowedValues": [
         "australiacentral",
@@ -178,7 +178,7 @@
     "parAllowedLocationsForConfidentialComputing": {
       "type": "array",
       "usedBy": "all and compliance",
-      "defaultValue": [],
+      "defaultValue": ["swedencentral"],
       "value": [],
       "allowedValues": [
         "australiacentral",
@@ -241,7 +241,7 @@
     "parDeployDdosProtection": {
       "type": "bool",
       "usedBy": "all, platform and compliance",
-      "defaultValue": true,
+      "defaultValue": false,
       "value": null,
       "description": "Toggles deployment of Azure DDOS protection. True to deploy, otherwise false."
     },
@@ -255,21 +255,21 @@
     "parEnableFirewall": {
       "type": "bool",
       "usedBy": "all and platform",
-      "defaultValue": true,
+      "defaultValue": false,
       "value": null,
       "description": "Toggles deployment of Azure Firewall. True to deploy, otherwise false if don't want to change the existing firewall policies."
     },
     "parUsePremiumFirewall": {
       "type": "bool",
       "usedBy": "all and platform",
-      "defaultValue": true,
+      "defaultValue": false,
       "value": null,
       "description": "Toggles deployment of the Premium SKU for Azure Firewall and only used if parEnableFirewall is enabled. True to use Premium SKU, otherwise false."
     },
     "parAzFirewallPoliciesEnabled": {
       "type": "bool",
       "usedBy": "all and platform",
-      "defaultValue": true,
+      "defaultValue": false,
       "value": null,
       "description": "Set this to true for the initial deployment as one firewall policy is required. Set this to false in subsequent deployments if using custom policies."
     },
@@ -356,21 +356,21 @@
     "parManagementSubscriptionId": {
       "type": "string",
       "usedBy": "bootstrap, platform and dashboard",
-      "defaultValue": null,
+      "defaultValue": "bffa6f3a-0c38-425d-b83e-bfd221beab62",
       "value": null,
       "description": "Optional management subscription ID when using an existing subscription."
     },
     "parIdentitySubscriptionId": {
       "type": "string",
       "usedBy": "bootstrap and platform",
-      "defaultValue": null,
+      "defaultValue": "f6a69b15-1e2e-4401-8a4d-1f8bf04280bf",
       "value": null,
       "description": "Optional identity subscription ID when using an existing subscription."
     },
     "parConnectivitySubscriptionId": {
       "type": "string",
       "usedBy": "bootstrap and platform",
-      "defaultValue": null,
+      "defaultValue": "032c28ad-9ca8-41a9-85b8-cd0a7c81bd06",
       "value": null,
       "description": "Optional connectivity subscription ID when using an existing subscription."
     },
@@ -453,7 +453,7 @@
     "parDeployBastion": {
       "type": "bool",
       "usedBy": "all and platform",
-      "defaultValue": true,
+      "defaultValue": false,
       "value": null,
       "description": "Toggles deployment of Azure Bastion. True to deploy, otherwise false."
     },
